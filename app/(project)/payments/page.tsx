@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/app/components/ui/button"
+import useMercadoPago from "@/app/hooks/useMercadoPago"
 import { useStripe } from "@/app/hooks/useStripe"
 
 export default function Login () {
@@ -9,6 +10,8 @@ export default function Login () {
         createSubscriptionStripeCheckout, 
         handleCreateStripePortal,
     } = useStripe()
+
+    const { createMercadoPagoCheckout } = useMercadoPago()
 
     return (
         <div className="h-screen w-full flex flex-col items-center justify-center gap-4">
@@ -27,6 +30,15 @@ export default function Login () {
             })}
             >
                 Criar Assinatura Stripe
+            </Button>
+
+            <Button onClick={() => 
+            createMercadoPagoCheckout({
+                testId: "123",
+                userEmail: "test@test.com"
+            })}
+            >
+                Criar Pagamento MercadoPago
             </Button>
 
             <Button onClick={handleCreateStripePortal} variant="outline">
