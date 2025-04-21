@@ -31,9 +31,9 @@ export async function POST(request: NextRequest) {
                 },
                 auto_return: "approved",
                 back_urls: {
-                    success: `${process.env.NEXT_PUBLIC_APP_URL}/api/mercado-pago/pending?payment_id={payment_id}&external_reference={external_reference}`,
-                    failure: `${process.env.NEXT_PUBLIC_APP_URL}/api/mercado-pago/pending?payment_id={payment_id}&external_reference={external_reference}`,
-                    pending: `${process.env.NEXT_PUBLIC_APP_URL}/api/mercado-pago/pending?payment_id={payment_id}&external_reference={external_reference}`,
+                    success: `${process.env.NEXT_PUBLIC_APP_URL}/api/mercado-pago/pending`,
+                    failure: `${process.env.NEXT_PUBLIC_APP_URL}/api/mercado-pago/pending`,
+                    pending: `${process.env.NEXT_PUBLIC_APP_URL}/api/mercado-pago/pending`,
                 },
             }
         })
