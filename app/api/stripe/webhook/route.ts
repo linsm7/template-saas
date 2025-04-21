@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from "next/server"
 const secret = process.env.STRIPE_WEBHOOK_SECRET!
 
 if (!secret) {
-    throw new Error("STRIPE_WEBHOOK_SECRETE is not set")
+    throw new Error("STRIPE_WEBHOOK_SECRET is not set")
 }
 
 export async function POST(req: NextRequest) {
