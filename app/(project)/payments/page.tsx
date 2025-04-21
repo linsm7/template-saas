@@ -1,10 +1,10 @@
 "use client"
 
+import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert"
 import { Button } from "@/app/components/ui/button"
 import useMercadoPago from "@/app/hooks/useMercadoPago"
 import { useStripe } from "@/app/hooks/useStripe"
 import { AlertCircle } from "lucide-react"
-import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert"
 
 export default function Login () {
     const { 
